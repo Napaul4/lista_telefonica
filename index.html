@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <title>Lista de contatos</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de contatos</h1>
+        </header>
+        <form id="data-form">
+            <input type="text" required placeholder="Nome ou apelido" id="nome"/>
+            <input id="telefone" onkeyup="mascaraFone(event)" required placeholder="Telefone"/>
+            <button type="submit">Adicionar Contato</button>
+        </form>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nome:</th>
+                    <th>Número de contato:</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Você tem:  contato(s)</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
