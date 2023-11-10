@@ -34,16 +34,17 @@ form.addEventListener('submit', function (e) {
 
   adicionaLinha();
   atualizaTabela();
+  somaContatos();
 })
 
 function adicionaLinha() {
-  
-  if (telefones.includes(inputTelefone.value)) {
+
+  if (telefones.includes((inputTelefone.value))) {
     alert(`O número de telefone: ${inputTelefone.value} já está vinculado a um contato`)
   } else {
     
-    telefones.push(parseInt(inputTelefone.value));
-    contatos.push(inputContato);
+    telefones.push(inputTelefone.value);
+    contatos.push(inputContato);  
 
     let linha = '<tr>';
     linha += `<td>${inputContato.value}</td>`;
@@ -61,4 +62,10 @@ function adicionaLinha() {
 function atualizaTabela () {
   const corpoTabela = document.querySelector('tbody');
   corpoTabela.innerHTML = linhas;
+}
+
+function somaContatos () {
+  let somaContatos = contatos.length;
+
+  document.getElementById('contador-contatos').innerHTML = `Você tem: ${somaContatos} contato(s).`
 }
