@@ -11,7 +11,7 @@ function mascaraFone() {
   let valor = inputTelefone.value.replace(/\D/g, "");
 
   if (valor.length > 11) {
-    valor = valor.substr(0, 11); // limita o número a 11 dígitos
+    valor = valor.substr(0, 11); 
   }
 
   if (valor.length > 10) {
@@ -29,7 +29,7 @@ function mascaraFone() {
 
 inputTelefone.addEventListener("input", mascaraFone);
 
-form.addEventListener('subtmit', function (e) {
+form.addEventListener('submit', function (e) {
   e.preventDefault();
 
   adicionaLinha();
@@ -54,7 +54,7 @@ function adicionaLinha() {
   }
 
   inputContato.value = '';
-  inputTelefone. value = '';
+  inputTelefone.value = '';
 
 }
 
